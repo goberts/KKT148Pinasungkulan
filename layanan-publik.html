@@ -1,98 +1,104 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layanan Publik | Kelurahan Pinasungkulan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body class="bg-slate-100 text-slate-800 font-['Poppins'] flex flex-col min-h-screen overflow-x-hidden">
 
-    <!-- Header / Navigasi (Solid Slate Smooth Header) -->
-<!-- Header / Navbar Layanan -->
-<header id="main-header" class="fixed top-0 left-0 w-full z-50 bg-slate-900 text-white shadow-md">
-    <div id="header-overlay" class="absolute inset-0 bg-slate-900 backdrop-blur-md z-0 pointer-events-none opacity-100"></div>
+    <!-- Header / Navigasi -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 bg-slate-900 text-white shadow-md">
+        <div id="header-overlay" class="absolute inset-0 bg-slate-900 backdrop-blur-md z-0 pointer-events-none opacity-100"></div>
 
-    <div id="header-container" class="relative z-10 container mx-auto flex items-center justify-between py-4 px-4 md:px-8 transition-all duration-300">
-        
-        <!-- Logo & Title -->
-        <a href="index.html" class="flex items-center space-x-3 group">
-            <img id="header-logo" src="foto\LogoBitung.png" alt="Logo Kelurahan" class="h-12 w-12 md:h-14 md:w-14 rounded-full object-cover shadow-md ring-2 ring-white/20 transition-all duration-300 group-hover:scale-105">
-            <div>
-                <h1 id="header-title" class="text-lg md:text-xl font-bold tracking-wide leading-tight transition-all duration-300">Kelurahan Pinasungkulan</h1>
-                <p id="header-desc" class="text-xs md:text-sm text-slate-300 font-light transition-all duration-300">Kota Bitung, Sulawesi Utara</p>
-            </div>
-        </a>
-        
-        <!-- Mobile Toggle Button -->
-        <button id="menu-toggle" class="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none transition-colors" aria-label="Buka Menu">
-            <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-        
-        <!-- Desktop Navigation (Status Aktif dipindah ke Layanan) -->
-        <nav id="desktop-nav" class="hidden lg:flex items-center gap-1 bg-white/10 backdrop-blur-md p-1.5 rounded-full border border-white/15">
-            <a href="index.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Beranda</a>
-            <a href="profil.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Profil</a>
-            <a href="pemerintahan.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Pemerintahan</a>
-            <!-- Layanan dibuat Aktif (Hijau) -->
-            <a href="layanan-publik.html" class="text-sm font-semibold text-white bg-emerald-600 px-5 py-2 rounded-full shadow-sm transition-all">Layanan</a>
-            <a href="berita-pengumuman.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Berita</a>
-            <a href="galeri.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Galeri</a>
-            <a href="kontak.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Kontak</a>
-        </nav>
-    </div>
-
-    <!-- Mobile Sidebar Menu -->
-    <nav id="mobile-menu" class="lg:hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden">
-        <div class="bg-white w-4/5 max-w-xs h-full shadow-2xl p-6 flex flex-col justify-between transition-transform duration-300">
-            <div>
-                <div class="flex items-center justify-between pb-6 border-b border-slate-100 mb-6">
-                    <div class="flex items-center gap-3">
-                        <img src="LogoBitung.png" class="h-10 w-10 rounded-full" alt="Logo">
-                        <span class="font-bold text-slate-800 text-sm">Pinasungkulan</span>
-                    </div>
-                    <button id="menu-close" class="p-1 text-slate-400 hover:text-slate-700 rounded-lg" aria-label="Tutup Menu">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
+        <div id="header-container" class="relative z-10 container mx-auto flex items-center justify-between py-4 px-4 md:px-8 transition-all duration-300">
+            
+            <!-- Logo & Title (Diperbaiki agar lebih rapi dan proporsional) -->
+            <a href="index.html" class="flex items-center gap-3.5 group">
+                <div class="relative flex items-center justify-center w-11 h-11 md:w-13 md:h-13 rounded-full bg-slate-800/80 border border-white/10 overflow-hidden shadow-sm transition-all duration-300 group-hover:scale-105 shrink-0">
+                    <img id="header-logo" src="foto/LogoBitung.png" alt="Logo Kelurahan" class="w-full h-full object-contain p-0.5">
                 </div>
-
-                <div class="flex flex-col gap-2">
-                    <a href="index.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Beranda</a>
-                    <a href="profil.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Profil Desa</a>
-                    <a href="pemerintahan.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Pemerintahan</a>
-                    <!-- Layanan dibuat Aktif -->
-                    <a href="layanan-publik.html" class="bg-emerald-50 text-emerald-700 font-semibold px-4 py-2.5 rounded-xl text-sm">Layanan Publik</a>
-                    <a href="berita-pengumuman.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Berita & Pengumuman</a>
-                    <a href="galeri.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Galeri</a>
-                    <a href="kontak.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Kontak</a>
+                <div>
+                    <h1 id="header-title" class="text-lg md:text-xl font-bold tracking-wide leading-tight transition-all duration-300">Kelurahan Pinasungkulan</h1>
+                    <p id="header-desc" class="text-xs md:text-sm text-slate-300 font-light transition-all duration-300">Kota Bitung, Sulawesi Utara</p>
                 </div>
-            </div>
-
-            <div class="pt-6 border-t border-slate-100 text-xs text-slate-400 text-center">
-                &copy; 2026 Kelurahan Pinasungkulan
-            </div>
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button id="menu-toggle" class="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none transition-colors" aria-label="Buka Menu">
+                <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav id="desktop-nav" class="hidden lg:flex items-center gap-1 bg-slate-900/40 backdrop-blur-md p-1.5 rounded-full border border-white/15">
+                <a href="index.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Beranda</a>
+                <a href="profil.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Profil</a>
+                <a href="pemerintahan.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Pemerintahan</a>
+                <a href="layanan-publik.html" class="text-sm font-semibold text-white bg-emerald-600 px-5 py-2 rounded-full shadow-sm transition-all">Layanan</a>
+                <a href="umkm.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">UMKM</a>
+                <a href="berita-pengumuman.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Berita</a>
+                <a href="galeri.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Galeri</a>
+                <a href="kontak.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Kontak</a>
+            </nav>
         </div>
-    </nav>
-</header>
 
-    <!-- Main Content -->
-    <main class="flex-1 pt-20 pb-16">
+        <!-- Mobile Sidebar Menu -->
+        <nav id="mobile-menu" class="lg:hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden">
+            <div class="bg-white w-4/5 max-w-xs h-full shadow-2xl p-6 flex flex-col justify-between transition-transform duration-300">
+                <div>
+                    <div class="flex items-center justify-between pb-6 border-b border-slate-100 mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 border border-slate-200 overflow-hidden shrink-0">
+                                <img src="foto/LogoBitung.png" class="w-full h-full object-contain p-0.5" alt="Logo">
+                            </div>
+                            <span class="font-bold text-slate-800 text-sm">Pinasungkulan</span>
+                        </div>
+                        <button id="menu-close" class="p-1 text-slate-400 hover:text-slate-700 rounded-lg" aria-label="Tutup Menu">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <a href="index.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Beranda</a>
+                        <a href="profil.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Profil Kelurahan</a>
+                        <a href="pemerintahan.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Pemerintahan</a>
+                        <a href="layanan-publik.html" class="bg-slate-800 text-white font-semibold px-4 py-2.5 rounded-xl text-sm">Layanan Publik</a>
+                        <a href="umkm.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">UMKM</a>
+                        <a href="berita-pengumuman.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Berita & Pengumuman</a>
+                        <a href="galeri.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Galeri</a>
+                        <a href="kontak.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Kontak</a>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-slate-100 text-xs text-slate-400 text-center">
+                    &copy; 2026 Kelurahan Pinasungkulan
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 pb-16">
         
-        <!-- Banner Halaman (Slate Gradient) -->
-        <section class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white py-12 px-4 shadow-md mb-10 border-b border-slate-700/80">
-            <div class="container mx-auto max-w-5xl text-center">
-                <span class="bg-slate-700/70 text-slate-200 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider border border-slate-600">Pusat Pelayanan Warga</span>
+        <!-- Header Banner Section -->
+        <section class="bg-slate-900 text-white pt-32 pb-10 mb-12 border-b border-slate-800 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-emerald-950/40 to-slate-900 z-0"></div>
+            <div class="container mx-auto px-4 relative z-10 text-center max-w-3xl">
+                <span class="bg-emerald-600/20 text-emerald-300 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider border border-emerald-500/30">Pusat Pelayanan Warga</span>
                 <h2 class="text-3xl md:text-4xl font-extrabold mt-3 mb-3 text-slate-100">Layanan Publik Digital</h2>
                 <p class="text-slate-300 text-base max-w-2xl mx-auto mb-6">
-                    Akses pengajuan surat, informasi kependudukan, dan arsip dokumen resmi Kelurahan Pinasungkulan secara cepat dan transparan.
+                    Akses informasi layanan, konsultasi administrasi, dan potensi lokal Kelurahan Pinasungkulan secara cepat dan mudah.
                 </p>
 
                 <!-- Information Badge -->
@@ -110,30 +116,30 @@
             <!-- Judul Section -->
             <div class="mb-8 text-center md:text-left">
                 <h3 class="text-2xl font-bold text-slate-900">Daftar Pelayanan Utama</h3>
-                <p class="text-slate-500 text-sm">Silakan pilih kategori layanan publik di bawah ini</p>
+                <p class="text-slate-500 text-sm">Silakan pilih kategori informasi atau layanan di bawah ini</p>
             </div>
 
             <!-- Grid Layanan Publik -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 
-                <!-- Layanan 1: Surat Online -->
+                <!-- Layanan 1: Hubungi WhatsApp Online -->
                 <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200/80 p-6 transition-all duration-300 ease-in-out group flex flex-col justify-between hover:-translate-y-1">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <div class="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-800 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-300 shadow-inner">
                                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
                                 </svg>
                             </div>
                             <span class="bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1 rounded-full border border-slate-300">Online 24/7</span>
                         </div>
-                        <h4 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-slate-900 transition-colors">Pengajuan Surat Online</h4>
+                        <h4 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-slate-900 transition-colors">Pengajuan Surat via WhatsApp</h4>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Permohonan Surat Keterangan Domisili, Surat Keterangan Usaha (SKU), Tidak Mampu (SKTM), dan administrasi lainnya secara mudah.
+                            Untuk pengurusan surat keterangan atau konsultasi administrasi, silakan hubungi layanan online kami langsung melalui WhatsApp.
                         </p>
                     </div>
-                    <a href="#" class="inline-flex items-center justify-center gap-2 bg-slate-800 text-white font-semibold py-2.5 px-5 rounded-xl hover:bg-slate-900 transition-all duration-200 shadow-md active:scale-95">
-                        <span>Ajukan Surat</span>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Kelurahan%20Pinasungkulan,%20saya%20ingin%20mengajukan%20permohonan%20surat..." target="_blank" class="inline-flex items-center justify-center gap-2 bg-slate-800 text-white font-semibold py-2.5 px-5 rounded-xl hover:bg-slate-900 transition-all duration-200 shadow-md active:scale-95">
+                        <span>Hubungi WhatsApp</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
@@ -153,59 +159,59 @@
                         </div>
                         <h4 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-slate-900 transition-colors">Data Kependudukan</h4>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Lihat statistik data demografi kependudukan kelurahan seperti jumlah penduduk, Kepala Keluarga (KK), dan grafik sebaran warga.
+                            Lihat rekapitulasi data demografi kependudukan lengkap seperti jumlah penduduk, kelompok umur, dan agama di halaman profil.
                         </p>
                     </div>
-                    <a href="#" class="inline-flex items-center justify-center gap-2 bg-slate-800 text-white font-semibold py-2.5 px-5 rounded-xl hover:bg-slate-900 transition-all duration-200 shadow-md active:scale-95">
-                        <span>Lihat Data</span>
+                    <a href="profil.html#data-kependudukan" class="inline-flex items-center justify-center gap-2 bg-slate-800 text-white font-semibold py-2.5 px-5 rounded-xl hover:bg-slate-900 transition-all duration-200 shadow-md active:scale-95">
+                        <span>Lihat Data Kependudukan</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
                     </a>
                 </div>
 
-                <!-- Layanan 3: Jadwal Posyandu -->
+                <!-- Layanan 3: Berita & Pengumuman -->
                 <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200/80 p-6 transition-all duration-300 ease-in-out group flex flex-col justify-between hover:-translate-y-1">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <div class="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-800 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-300 shadow-inner">
                                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
                                 </svg>
                             </div>
-                            <span class="bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1 rounded-full border border-slate-300">Kesehatan</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1 rounded-full border border-slate-300">Informasi</span>
                         </div>
-                        <h4 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-slate-900 transition-colors">Jadwal Posyandu</h4>
+                        <h4 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-slate-900 transition-colors">Berita & Pengumuman</h4>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Informasi jadwal rutin kegiatan posyandu balita, pemeriksaan kesehatan lansia, dan program kesehatan masyarakat lainnya.
+                            Pantau informasi terbaru mengenai kegiatan kelurahan, program kerja, dan pengumuman penting lainnya.
                         </p>
                     </div>
-                    <a href="#" class="inline-flex items-center justify-center gap-2 bg-slate-800 text-white font-semibold py-2.5 px-5 rounded-xl hover:bg-slate-900 transition-all duration-200 shadow-md active:scale-95">
-                        <span>Lihat Jadwal</span>
+                    <a href="berita-pengumuman.html" class="inline-flex items-center justify-center gap-2 bg-slate-800 text-white font-semibold py-2.5 px-5 rounded-xl hover:bg-slate-900 transition-all duration-200 shadow-md active:scale-95">
+                        <span>Lihat Berita</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
                     </a>
                 </div>
 
-                <!-- Layanan 4: Arsip Perdes -->
+                <!-- Layanan 4: UMKM Kelurahan -->
                 <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200/80 p-6 transition-all duration-300 ease-in-out group flex flex-col justify-between hover:-translate-y-1">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <div class="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-800 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-300 shadow-inner">
                                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
                                 </svg>
                             </div>
-                            <span class="bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1 rounded-full border border-slate-300">Dokumen</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1 rounded-full border border-slate-300">Potensi Lokal</span>
                         </div>
-                        <h4 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-slate-900 transition-colors">Arsip Perdes & Dokumen</h4>
+                        <h4 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-slate-900 transition-colors">UMKM Kelurahan</h4>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Akses publikasi lembaran peraturan kelurahan, keputusan lurah, serta transparansi laporan anggaran secara terbuka.
+                            Jelajahi berbagai produk unggulan, makanan khas, dan usaha mikro kecil menengah dari warga lokal Pinasungkulan.
                         </p>
                     </div>
-                    <a href="#" class="inline-flex items-center justify-center gap-2 bg-slate-800 text-white font-semibold py-2.5 px-5 rounded-xl hover:bg-slate-900 transition-all duration-200 shadow-md active:scale-95">
-                        <span>Lihat Arsip</span>
+                    <a href="umkm.html" class="inline-flex items-center justify-center gap-2 bg-slate-800 text-white font-semibold py-2.5 px-5 rounded-xl hover:bg-slate-900 transition-all duration-200 shadow-md active:scale-95">
+                        <span>Lihat UMKM</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
@@ -226,30 +232,30 @@
                     <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
                         <h5 class="font-semibold text-slate-800 flex items-center gap-2 mb-1">
                             <span class="w-6 h-6 rounded-full bg-slate-800 text-white flex items-center justify-center text-xs font-bold">Q</span>
-                            Bagaimana cara mengajukan surat online?
+                            Bagaimana cara mengurus atau mengajukan surat secara online?
                         </h5>
                         <p class="text-slate-600 text-sm ml-8">
-                            Isi formulir pengajuan pada tombol <strong>"Ajukan Surat"</strong> di atas, lengkapi data kependudukan dan unggah berkas persyaratan yang diminta.
+                            Anda dapat mengklik tombol <strong>"Hubungi WhatsApp"</strong> di atas untuk langsung terhubung dengan layanan admin guna berkonsultasi mengenai pengajuan surat.
                         </p>
                     </div>
 
                     <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
                         <h5 class="font-semibold text-slate-800 flex items-center gap-2 mb-1">
                             <span class="w-6 h-6 rounded-full bg-slate-800 text-white flex items-center justify-center text-xs font-bold">Q</span>
-                            Apakah pelayanan surat dipungut biaya?
+                            Di mana saya bisa melihat data kependudukan wilayah?
                         </h5>
                         <p class="text-slate-600 text-sm ml-8">
-                            Seluruh pengurusan berkas administrasi dan surat-menyurat di Kelurahan Pinasungkulan <strong>Gratis (Rp 0)</strong>.
+                            Data kependudukan dan statistik demografi lengkap dapat diakses secara langsung melalui menu <strong>"Profil"</strong> pada navigasi website.
                         </p>
                     </div>
 
                     <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
                         <h5 class="font-semibold text-slate-800 flex items-center gap-2 mb-1">
                             <span class="w-6 h-6 rounded-full bg-slate-800 text-white flex items-center justify-center text-xs font-bold">Q</span>
-                            Kapan jadwal posyandu diadakan?
+                            Bagaimana cara melihat informasi seputar kegiatan dan pengumuman kelurahan?
                         </h5>
                         <p class="text-slate-600 text-sm ml-8">
-                            Jadwal posyandu dapat dilihat pada menu <strong>"Lihat Jadwal"</strong> atau papan pengumuman resmi di kantor kelurahan.
+                            Segala informasi dan pengumuman kegiatan terbaru dipublikasikan secara berkala melalui menu <strong>"Berita"</strong>.
                         </p>
                     </div>
 
@@ -260,7 +266,7 @@
             <div class="bg-slate-800 text-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg border border-slate-700">
                 <div>
                     <h4 class="text-xl font-bold mb-1">Butuh Bantuan Informasi Tambahan?</h4>
-                    <p class="text-slate-300 text-sm">Tim pelayanan kami siap melayani pertanyaan dan bantuan kendala Anda.</p>
+                    <p class="text-slate-300 text-sm">Tim pelayanan kelurahan kami siap membantu menjawab pertanyaan Anda.</p>
                 </div>
                 <a href="kontak.html" class="bg-slate-100 text-slate-900 hover:bg-white font-bold px-6 py-3 rounded-xl shadow transition-all duration-200 active:scale-95 whitespace-nowrap">
                     Hubungi Kami
@@ -270,24 +276,59 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-300 py-8 border-t border-slate-800">
-        <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-6 gap-4">
-            <div class="flex items-center space-x-3">
-                <img src="LogoPosko.jpg" alt="Logo Pemda" class="h-10 w-10 rounded-full border border-slate-700 object-cover">
-                <span class="font-semibold text-sm md:text-base text-slate-200">Pemerintah Kelurahan Pinasungkulan</span>
+    <!-- Footer Slate -->
+    <footer class="bg-slate-900 text-slate-300 pt-12 pb-8 border-t border-slate-800 mt-auto">
+        <div class="container mx-auto px-4 md:px-8 max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-800">
+                
+                <!-- Identitas Kelurahan & Deskripsi -->
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-800 border border-white/10 overflow-hidden shrink-0">
+                            <img src="foto/LogoBitung.png" alt="Logo Kelurahan" class="w-full h-full object-contain p-0.5">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-base">Kelurahan Pinasungkulan</h3>
+                            <p class="text-xs text-slate-400">Kecamatan Ranowulu, Kota Bitung</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                        Website ini berfungsi sebagai media transparansi publik serta kemudahan akses layanan warga.
+                    </p>
+                </div>
+
+                <!-- Tautan Cepat -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Tautan Cepat</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="profil.html" class="hover:text-emerald-400 transition-colors">Profil Kelurahan</a></li>
+                        <li><a href="pemerintahan.html" class="hover:text-emerald-400 transition-colors">Struktur Organisasi</a></li>
+                        <li><a href="layanan-publik.html" class="hover:text-emerald-400 transition-colors">Layanan Publik</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition-colors">UMKM</a></li>
+                        <li><a href="berita-pengumuman.html" class="hover:text-emerald-400 transition-colors">Berita Terkini</a></li>
+                    </ul>
+                </div>
+
+                <!-- Media Sosial -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Media Sosial</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="#" class="hover:text-emerald-400 transition-colors flex items-center gap-2">Instagram Resmi</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition-colors flex items-center gap-2">Facebook Resmi</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition-colors flex items-center gap-2">Channel YouTube</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="flex space-x-6 text-sm text-slate-400">
-                <a href="#" class="hover:text-white transition-colors">Instagram</a>
-                <a href="#" class="hover:text-white transition-colors">Facebook</a>
-                <a href="#" class="hover:text-white transition-colors">YouTube</a>
-            </div>
-            <div class="text-xs text-slate-400">
-                &copy; 2026 KKT 148 POSKO PINASUNGKULAN BITUNG
+
+            <!-- Footer Bottom -->
+            <div class="pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+                <p>&copy; 2026 KKT 148 POSKO PINASUNGKULAN BITUNG.</p>
+                <p>Website Resmi Pelayanan Kelurahan Pinasungkulan</p>
             </div>
         </div>
     </footer>
 
+    <!-- File Script External -->
     <script src="script.js"></script>
 </body>
 
