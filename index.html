@@ -14,7 +14,6 @@
             overflow-x: hidden !important;
         }
         body { font-family: 'Poppins', sans-serif; }
-        /* Menyembunyikan scrollbar bawaan agar slider bersih */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
@@ -28,11 +27,13 @@
 
         <div id="header-container" class="relative z-10 container mx-auto flex items-center justify-between py-4 px-4 md:px-8 transition-all duration-300">
             
-            <!-- Logo & Title -->
-            <a href="index.html" class="flex items-center space-x-3 group">
-                <img id="header-logo" src="foto/LogoBitung.png" alt="Logo Kelurahan" class="h-12 w-12 md:h-14 md:w-14 rounded-full object-cover shadow-md ring-2 ring-white/20 transition-all duration-300 group-hover:scale-105">
+            <!-- Logo & Title (Disesuaikan dengan Profil/Gambar) -->
+            <a href="index.html" class="flex items-center space-x-3.5 group">
+                <div class="relative flex items-center justify-center w-11 h-11 md:w-13 md:h-13 rounded-full bg-slate-800/80 border border-white/10 overflow-hidden shadow-sm transition-all duration-300 group-hover:scale-105 shrink-0">
+                    <img id="header-logo" src="foto/LogoBitung.png" alt="Logo Kelurahan" class="w-full h-full object-contain p-0.5">
+                </div>
                 <div>
-                    <h1 id="header-title" class="text-lg md:text-xl font-bold tracking-wide leading-tight transition-all duration-300">Kelurahan Pinasungkulan</h1>
+                    <h1 id="header-title" class="text-base md:text-xl font-bold tracking-wide leading-tight transition-all duration-300">Kelurahan Pinasungkulan</h1>
                     <p id="header-desc" class="text-xs md:text-sm text-slate-300 font-light transition-all duration-300">Kota Bitung, Sulawesi Utara</p>
                 </div>
             </a>
@@ -62,9 +63,9 @@
             <div class="bg-white w-4/5 max-w-xs h-full shadow-2xl p-6 flex flex-col justify-between transition-transform duration-300">
                 <div>
                     <div class="flex items-center justify-between pb-6 border-b border-slate-100 mb-6">
-                        <div class="flex items-center gap-3">
-                            <img src="foto/LogoBitung.png" class="h-10 w-10 rounded-full" alt="Logo">
-                            <span class="font-bold text-slate-800 text-sm">Pinasungkulan</span>
+                        <div class="flex items-center gap-2">
+                            <img src="foto/LogoBitung.png" class="h-9 w-9 rounded-full object-cover" alt="Logo Bitung">
+                            <span class="font-bold text-slate-800 text-xs">Pinasungkulan</span>
                         </div>
                         <button id="menu-close" class="p-1 text-slate-400 hover:text-slate-700 rounded-lg" aria-label="Tutup Menu">
                             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -163,7 +164,6 @@
             <div>
                 <span class="text-slate-600 font-bold text-sm tracking-widest uppercase">Tentang Kami</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2 text-slate-900 leading-tight">Membangun Kelurahan Mandiri & Berkelanjutan</h2>
-                <!-- Garis Bawah Judul -->
                 <div class="w-16 h-1 bg-slate-700 mt-3 mb-6 rounded-full"></div>
 
                 <p class="text-slate-600 leading-relaxed mb-6 font-normal">
@@ -191,17 +191,14 @@
     <section id="pemerintahan" class="py-16 bg-slate-100/80 border-y border-slate-200 overflow-hidden">
         <div class="container mx-auto px-4 md:px-8">
             
-            <!-- Judul Seksi -->
             <div class="text-center mb-12">
                 <span class="text-slate-500 font-bold text-xs tracking-widest uppercase">Struktur Organisasi</span>
                 <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-wider uppercase mt-1">PERANGKAT KELURAHAN</h2>
-                <!-- Garis Bawah Judul -->
                 <div class="w-16 h-1 bg-slate-700 mx-auto mt-3 rounded-full"></div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
-                <!-- Sisi Kiri: Deskripsi, Visi, Misi -->
                 <div class="lg:col-span-5 space-y-5">
                     <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight">
                         Pemerintah Kelurahan Pinasungkulan
@@ -210,7 +207,6 @@
                         Dikelola oleh aparatur kelurahan yang berdedikasi tinggi untuk melayani seluruh masyarakat Kelurahan Pinasungkulan secara ramah, responsif, dan profesional.
                     </p>
 
-                    <!-- Card Visi -->
                     <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm hover:border-slate-400 transition-all">
                         <div class="flex items-center gap-3 mb-2">
                             <span class="p-2 bg-slate-800 text-white rounded-lg text-xs font-bold uppercase tracking-wider">VISI</span>
@@ -221,7 +217,6 @@
                         </p>
                     </div>
 
-                    <!-- Card Misi -->
                     <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm hover:border-slate-400 transition-all">
                         <div class="flex items-center gap-3 mb-2">
                             <span class="p-2 bg-slate-700 text-white rounded-lg text-xs font-bold uppercase tracking-wider">MISI</span>
@@ -235,40 +230,30 @@
                     </div>
                 </div>
 
-                <!-- Sisi Kanan: Slider Foto Aparatur & Tombol Navigasi Struktur Pemerintahan -->
                 <div class="lg:col-span-7 relative">
-                    
-                    <!-- Tombol Panah Kiri -->
                     <button id="slide-left" aria-label="Geser Kiri" class="absolute left-1 md:-left-5 top-1/3 -translate-y-1/2 z-30 bg-slate-800 hover:bg-slate-700 text-white p-3 rounded-full shadow-xl border border-slate-600 transition-all active:scale-95 focus:outline-none cursor-pointer">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
                         </svg>
                     </button>
 
-                    <!-- Tombol Panah Kanan -->
                     <button id="slide-right" aria-label="Geser Kanan" class="absolute right-1 md:-right-5 top-1/3 -translate-y-1/2 z-30 bg-slate-800 hover:bg-slate-700 text-white p-3 rounded-full shadow-xl border border-slate-600 transition-all active:scale-95 focus:outline-none cursor-pointer">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </button>
 
-                    <!-- Container Slider -->
                     <div id="aparatur-slider" class="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 pt-2 px-8 md:px-12 no-scrollbar">
                         
-                        <!-- Card 1: Lurah -->
                         <div class="snap-start shrink-0 w-[270px] sm:w-[310px] bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all hover:shadow-md">
                             <div class="h-32 bg-slate-900 relative flex items-center justify-between p-4 overflow-hidden">
                                 <div class="absolute inset-0 bg-gradient-to-r from-slate-800 via-slate-900 to-slate-950"></div>
-                                
                                 <div class="relative z-10 w-20 h-20 rounded-full border-4 border-slate-700 bg-white overflow-hidden shadow-md shrink-0">
                                     <img src="foto/LogoPosko.jpg" alt="Lurah Pinasungkulan" class="w-full h-full object-cover">
                                 </div>
-                                
                                 <div class="relative z-10 text-right text-white">
                                     <span class="text-[10px] uppercase font-medium tracking-wider text-slate-300 block">Jabatan</span>
-                                    <h4 class="font-extrabold text-sm md:text-base leading-tight tracking-wide border-b-2 border-slate-400 pb-0.5">
-                                        LURAH
-                                    </h4>
+                                    <h4 class="font-extrabold text-sm md:text-base leading-tight tracking-wide border-b-2 border-slate-400 pb-0.5">LURAH</h4>
                                 </div>
                             </div>
                             <div class="p-4 bg-slate-50 flex justify-between items-center">
@@ -280,20 +265,15 @@
                             </div>
                         </div>
 
-                        <!-- Card 2: Sekretaris Kelurahan -->
                         <div class="snap-start shrink-0 w-[270px] sm:w-[310px] bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all hover:shadow-md">
                             <div class="h-32 bg-slate-900 relative flex items-center justify-between p-4 overflow-hidden">
                                 <div class="absolute inset-0 bg-gradient-to-r from-slate-800 via-slate-900 to-slate-950"></div>
-                                
                                 <div class="relative z-10 w-20 h-20 rounded-full border-4 border-slate-700 bg-white overflow-hidden shadow-md shrink-0">
                                     <img src="foto/LogoPosko.jpg" alt="Sekretaris Kelurahan" class="w-full h-full object-cover">
                                 </div>
-                                
                                 <div class="relative z-10 text-right text-white">
                                     <span class="text-[10px] uppercase font-medium tracking-wider text-slate-300 block">Jabatan</span>
-                                    <h4 class="font-extrabold text-xs md:text-sm leading-tight tracking-wide border-b-2 border-slate-400 pb-0.5">
-                                        SEKRETARIS KELURAHAN
-                                    </h4>
+                                    <h4 class="font-extrabold text-xs md:text-sm leading-tight tracking-wide border-b-2 border-slate-400 pb-0.5">SEKRETARIS KELURAHAN</h4>
                                 </div>
                             </div>
                             <div class="p-4 bg-slate-50 flex justify-between items-center">
@@ -305,20 +285,15 @@
                             </div>
                         </div>
 
-                        <!-- Card 3: Kasi Pemerintahan -->
                         <div class="snap-start shrink-0 w-[270px] sm:w-[310px] bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all hover:shadow-md">
                             <div class="h-32 bg-slate-900 relative flex items-center justify-between p-4 overflow-hidden">
                                 <div class="absolute inset-0 bg-gradient-to-r from-slate-800 via-slate-900 to-slate-950"></div>
-                                
                                 <div class="relative z-10 w-20 h-20 rounded-full border-4 border-slate-700 bg-white overflow-hidden shadow-md shrink-0">
                                     <img src="foto/LogoPosko.jpg" alt="Kasi Pemerintahan" class="w-full h-full object-cover">
                                 </div>
-                                
                                 <div class="relative z-10 text-right text-white">
                                     <span class="text-[10px] uppercase font-medium tracking-wider text-slate-300 block">Jabatan</span>
-                                    <h4 class="font-extrabold text-xs md:text-sm leading-tight tracking-wide border-b-2 border-slate-400 pb-0.5">
-                                        NAMA JABATAN
-                                    </h4>
+                                    <h4 class="font-extrabold text-xs md:text-sm leading-tight tracking-wide border-b-2 border-slate-400 pb-0.5">NAMA JABATAN</h4>
                                 </div>
                             </div>
                             <div class="p-4 bg-slate-50 flex justify-between items-center">
@@ -330,20 +305,15 @@
                             </div>
                         </div>
 
-                        <!-- Card 4: Kasi Kesejahteraan -->
                         <div class="snap-start shrink-0 w-[270px] sm:w-[310px] bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all hover:shadow-md">
                             <div class="h-32 bg-slate-900 relative flex items-center justify-between p-4 overflow-hidden">
                                 <div class="absolute inset-0 bg-gradient-to-r from-slate-800 via-slate-900 to-slate-950"></div>
-                                
                                 <div class="relative z-10 w-20 h-20 rounded-full border-4 border-slate-700 bg-white overflow-hidden shadow-md shrink-0">
                                     <img src="foto/LogoPosko.jpg" alt="Kasi Kesejahteraan" class="w-full h-full object-cover">
                                 </div>
-                                
                                 <div class="relative z-10 text-right text-white">
                                     <span class="text-[10px] uppercase font-medium tracking-wider text-slate-300 block">Jabatan</span>
-                                    <h4 class="font-extrabold text-xs md:text-sm leading-tight tracking-wide border-b-2 border-slate-400 pb-0.5">
-                                        NAMA JABATAN
-                                    </h4>
+                                    <h4 class="font-extrabold text-xs md:text-sm leading-tight tracking-wide border-b-2 border-slate-400 pb-0.5">NAMA JABATAN</h4>
                                 </div>
                             </div>
                             <div class="p-4 bg-slate-50 flex justify-between items-center">
@@ -357,12 +327,10 @@
 
                     </div>
 
-                    <!-- Petunjuk Scroll -->
                     <p class="text-center text-xs text-slate-500 mt-2 font-medium">
                         Tekan tombol panah untuk menggeser perangkat kelurahan
                     </p>
 
-                    <!-- Tombol Navigasi Struktur Pemerintahan -->
                     <div class="pt-6 text-center">
                         <a href="pemerintahan.html" class="inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-all shadow-md shadow-slate-900/10 border border-slate-700 group transform hover:-translate-y-0.5">
                             <span>Lihat Struktur Pemerintahan Lengkap</span>
@@ -384,15 +352,11 @@
             <div class="text-center max-w-xl mx-auto mb-14">
                 <span class="text-slate-600 font-bold text-sm tracking-widest uppercase">Kemudahan Akses</span>
                 <h2 class="text-3xl font-bold text-slate-900 mt-2">Layanan Utama</h2>
-                <!-- Garis Bawah Judul -->
                 <div class="w-16 h-1 bg-slate-700 mx-auto mt-3 rounded-full"></div>
                 <p class="text-slate-500 mt-3 text-sm md:text-base">Akses cepat dan mudah untuk berbagai keperluan publik di Kelurahan Pinasungkulan.</p>
             </div>
 
-            <!-- Grid 4 Kartu Layanan -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <!-- Card 1: Profil -->
                 <a href="profil.html" class="group p-6 bg-slate-50 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-slate-400 transform hover:-translate-y-1">
                     <div class="w-12 h-12 rounded-xl bg-slate-200 text-slate-800 flex items-center justify-center mb-5 group-hover:bg-slate-800 group-hover:text-white transition-colors">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
@@ -401,7 +365,6 @@
                     <p class="text-xs text-slate-500 mt-2 leading-relaxed">Informasi struktur organisasi, visi misi, dan sejarah kelurahan.</p>
                 </a>
 
-                <!-- Card 2: Berita -->
                 <a href="berita-pengumuman.html" class="group p-6 bg-slate-50 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-slate-400 transform hover:-translate-y-1">
                     <div class="w-12 h-12 rounded-xl bg-slate-200 text-slate-800 flex items-center justify-center mb-5 group-hover:bg-slate-800 group-hover:text-white transition-colors">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
@@ -410,7 +373,6 @@
                     <p class="text-xs text-slate-500 mt-2 leading-relaxed">Update informasi terbaru seputar aktivitas warga dan kelurahan.</p>
                 </a>
 
-                <!-- Card 3: Pemerintahan -->
                 <a href="pemerintahan.html" class="group p-6 bg-slate-50 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-slate-400 transform hover:-translate-y-1">
                     <div class="w-12 h-12 rounded-xl bg-slate-200 text-slate-800 flex items-center justify-center mb-5 group-hover:bg-slate-800 group-hover:text-white transition-colors">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
@@ -419,7 +381,6 @@
                     <p class="text-xs text-slate-500 mt-2 leading-relaxed">Informasi tata kelola pemerintahan dan perangkat kelurahan.</p>
                 </a>
 
-                <!-- Card 4: UMKM -->
                 <a href="umkm.html" class="group p-6 bg-slate-50 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-slate-400 transform hover:-translate-y-1">
                     <div class="w-12 h-12 rounded-xl bg-slate-200 text-slate-800 flex items-center justify-center mb-5 group-hover:bg-slate-800 group-hover:text-white transition-colors">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
@@ -427,7 +388,6 @@
                     <h3 class="font-bold text-lg text-slate-800 group-hover:text-slate-900 transition-colors">UMKM</h3>
                     <p class="text-xs text-slate-500 mt-2 leading-relaxed">Produk lokal unggulan dan potensi usaha warga Pinasungkulan.</p>
                 </a>
-
             </div>
         </div>
     </section>
@@ -438,7 +398,6 @@
             <div>
                 <span class="text-slate-600 font-bold text-sm tracking-widest uppercase">Pusat Informasi</span>
                 <h2 class="text-3xl font-bold text-slate-900 mt-1">Berita & Pengumuman</h2>
-                <!-- Garis Bawah Judul -->
                 <div class="w-16 h-1 bg-slate-700 mt-3 rounded-full"></div>
             </div>
             <a href="berita-pengumuman.html" class="mt-4 md:mt-0 text-slate-800 font-semibold hover:text-slate-600 flex items-center gap-1 group">
@@ -498,7 +457,6 @@
             <div class="text-center max-w-xl mx-auto mb-14">
                 <span class="text-slate-400 font-bold text-sm tracking-widest uppercase">Keunggulan Lokal</span>
                 <h2 class="text-3xl font-bold mt-2">Potensi Pinasungkulan</h2>
-                <!-- Garis Bawah Judul -->
                 <div class="w-16 h-1 bg-slate-400 mx-auto mt-3 rounded-full"></div>
                 <p class="text-slate-300 mt-3 text-sm md:text-base">Kekayaan lokal yang menjadi penggerak perekonomian dan daya tarik kelurahan.</p>
             </div>
@@ -539,7 +497,6 @@
         <div class="text-center max-w-xl mx-auto mb-12">
             <span class="text-slate-600 font-bold text-sm tracking-widest uppercase">Dokumentasi</span>
             <h2 class="text-3xl font-bold text-slate-900 mt-1">Galeri Kelurahan</h2>
-            <!-- Garis Bawah Judul -->
             <div class="w-16 h-1 bg-slate-700 mx-auto mt-3 rounded-full"></div>
         </div>
 
@@ -570,7 +527,6 @@
             </div>
         </div>
 
-        <!-- Tombol Galeri -->
         <div class="text-center">
             <a href="galeri.html" class="inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-all shadow-md shadow-slate-900/10 border border-slate-700 group transform hover:-translate-y-0.5">
                 <span>Lihat Semua Foto Galeri</span>
@@ -585,12 +541,10 @@
     <section id="kontak" class="py-4 bg-slate-100/70 border-t border-slate-200 overflow-hidden">
         <div class="container mx-auto px-4 md:px-8">
             <div class="grid md:grid-cols-12 gap-8 items-stretch">
-                <!-- Informasi Kontak -->
                 <div class="md:col-span-5 bg-white p-8 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
                     <div>
                         <span class="text-slate-600 font-bold text-sm tracking-widest uppercase">Hubungi Kami</span>
                         <h3 class="text-2xl font-bold text-slate-900 mt-1">Kantor Kelurahan</h3>
-                        <!-- Garis Bawah Judul -->
                         <div class="w-16 h-1 bg-slate-700 mt-3 mb-6 rounded-full"></div>
                         
                         <div class="space-y-5 text-sm text-slate-600">
@@ -631,7 +585,6 @@
                     </div>
                 </div>
 
-                <!-- Maps -->
                 <div class="md:col-span-7 rounded-2xl overflow-hidden shadow-sm border border-slate-200 min-h-[350px]">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1213.9856808318602!2d125.11785693849546!3d1.5504665176277332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3287a9ae23148113%3A0x867e034144f7903!2sKantor%20Lurah%20Pinasungkulan!5e0!3m2!1sen!2sid!4v1784189494903!5m2!1sen!2sid"
@@ -649,54 +602,59 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 overflow-hidden">
-        <div class="container mx-auto px-4 md:px-8">
+    <footer class="bg-slate-900 text-slate-300 pt-12 pb-8 border-t border-slate-800 mt-auto">
+        <div class="container mx-auto px-4 md:px-8 max-w-6xl">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-800">
-                <!-- Branding -->
-                <div class="md:col-span-2">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <img src="foto/LogoBitung.png" alt="Logo Pemda" class="h-10 w-10 rounded-full">
-                        <span class="font-bold text-white text-lg">Kelurahan Pinasungkulan</span>
+                
+                <!-- Identitas Kelurahan & Deskripsi -->
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-800 border border-white/10 overflow-hidden shrink-0">
+                            <img src="foto/LogoBitung.png" alt="Logo Kelurahan" class="w-full h-full object-contain p-0.5">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-base">Kelurahan Pinasungkulan</h3>
+                            <p class="text-xs text-slate-400">Kecamatan Ranowulu, Kota Bitung</p>
+                        </div>
                     </div>
-                    <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
-                        Kecamatan Ranowulu, Kota Bitung. Website ini berfungsi sebagai media transparansi publik serta kemudahan akses layanan warga.
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                        Website ini berfungsi sebagai media transparansi publik serta kemudahan akses layanan warga.
                     </p>
                 </div>
 
                 <!-- Tautan Cepat -->
                 <div>
-                    <h4 class="text-white font-semibold mb-4 text-sm tracking-wider uppercase">Tautan Cepat</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="profil.html" class="hover:text-white transition-colors">Profil Kelurahan</a></li>
-                        <li><a href="pemerintahan.html" class="hover:text-white transition-colors">Struktur Organisasi</a></li>
-                        <li><a href="layanan-publik.html" class="hover:text-white transition-colors">Layanan Publik</a></li>
-                        <li><a href="umkm.html" class="hover:text-white transition-colors">UMKM</a></li>
-                        <li><a href="berita-pengumuman.html" class="hover:text-white transition-colors">Berita Terkini</a></li>
+                    <h4 class="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Tautan Cepat</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="profil.html" class="hover:text-emerald-400 transition-colors">Profil Kelurahan</a></li>
+                        <li><a href="pemerintahan.html" class="hover:text-emerald-400 transition-colors">Struktur Organisasi</a></li>
+                        <li><a href="layanan-publik.html" class="hover:text-emerald-400 transition-colors">Layanan Publik</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition-colors">UMKM</a></li>
+                        <li><a href="berita-pengumuman.html" class="hover:text-emerald-400 transition-colors">Berita Terkini</a></li>
                     </ul>
                 </div>
 
                 <!-- Media Sosial -->
                 <div>
-                    <h4 class="text-white font-semibold mb-4 text-sm tracking-wider uppercase">Media Sosial</h4>
-                    <div class="flex flex-col space-y-2 text-sm">
-                        <a href="https://www.instagram.com/kkt148_pinasungkulan?igsh=MWF6Ym1oeGsydW1odQ==" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">Instagram Resmi</a>
-                        <a href="#" class="hover:text-white transition-colors">Facebook Resmi</a>
-                        <a href="#" class="hover:text-white transition-colors">Channel YouTube</a>
-                    </div>
+                    <h4 class="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Media Sosial</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="#" class="hover:text-emerald-400 transition-colors flex items-center gap-2">Instagram Resmi</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition-colors flex items-center gap-2">Facebook Resmi</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition-colors flex items-center gap-2">Channel YouTube</a></li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Hak Cipta -->
-            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-                <p>&copy; 2026 KKT 148 POSKO PINASUNGKULAN BITUNG. All rights reserved.</p>
-                <p>Dikembangkan untuk kemajuan warga Kelurahan Pinasungkulan.</p>
+            <!-- Footer Bottom -->
+            <div class="pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+                <p>&copy; 2026 KKT 148 POSKO PINASUNGKULAN BITUNG.</p>
+                <p>Website Resmi Pelayanan Kelurahan Pinasungkulan</p>
             </div>
         </div>
     </footer>
     
     <script src="script.js"></script>
 
-    <!-- Script Tombol Panah Geser Perangkat Kelurahan -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const slider = document.getElementById('aparatur-slider');
