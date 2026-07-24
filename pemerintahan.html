@@ -14,15 +14,17 @@
 
 <body class="bg-slate-100 text-slate-800 font-['Poppins'] flex flex-col min-h-screen overflow-x-hidden">
 
-    <!-- Header / Navigasi (Disamakan dengan profil.html) -->
+    <!-- Header / Navigasi  -->
     <header id="main-header" class="fixed top-0 left-0 w-full z-50 bg-slate-900 text-white shadow-md">
         <div id="header-overlay" class="absolute inset-0 bg-slate-900 backdrop-blur-md z-0 pointer-events-none opacity-100"></div>
 
         <div id="header-container" class="relative z-10 container mx-auto flex items-center justify-between py-4 px-4 md:px-8 transition-all duration-300">
             
-            <!-- Logo & Title -->
-            <a href="index.html" class="flex items-center space-x-3 group">
-                <img id="header-logo" src="foto/LogoBitung.png" alt="Logo Kelurahan" class="h-12 w-12 md:h-14 md:w-14 rounded-full object-cover shadow-md ring-2 ring-white/20 transition-all duration-300 group-hover:scale-105">
+            <!-- Logo & Title (Diperbaiki agar lebih rapi dan proporsional) -->
+            <a href="index.html" class="flex items-center gap-3.5 group">
+                <div class="relative flex items-center justify-center w-11 h-11 md:w-13 md:h-13 rounded-full bg-slate-800/80 border border-white/10 overflow-hidden shadow-sm transition-all duration-300 group-hover:scale-105 shrink-0">
+                    <img id="header-logo" src="foto/LogoBitung.png" alt="Logo Kelurahan" class="w-full h-full object-contain p-0.5">
+                </div>
                 <div>
                     <h1 id="header-title" class="text-lg md:text-xl font-bold tracking-wide leading-tight transition-all duration-300">Kelurahan Pinasungkulan</h1>
                     <p id="header-desc" class="text-xs md:text-sm text-slate-300 font-light transition-all duration-300">Kota Bitung, Sulawesi Utara</p>
@@ -40,7 +42,6 @@
             <nav id="desktop-nav" class="hidden lg:flex items-center gap-1 bg-slate-900/40 backdrop-blur-md p-1.5 rounded-full border border-white/15">
                 <a href="index.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Beranda</a>
                 <a href="profil.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Profil</a>
-                <!-- Link Aktif untuk Pemerintahan -->
                 <a href="pemerintahan.html" class="text-sm font-semibold text-white bg-emerald-600 px-5 py-2 rounded-full shadow-sm transition-all">Pemerintahan</a>
                 <a href="layanan-publik.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Layanan</a>
                 <a href="umkm.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">UMKM</a>
@@ -56,7 +57,9 @@
                 <div>
                     <div class="flex items-center justify-between pb-6 border-b border-slate-100 mb-6">
                         <div class="flex items-center gap-3">
-                            <img src="foto/LogoBitung.png" class="h-10 w-10 rounded-full" alt="Logo">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 border border-slate-200 overflow-hidden shrink-0">
+                                <img src="foto/LogoBitung.png" class="w-full h-full object-contain p-0.5" alt="Logo">
+                            </div>
                             <span class="font-bold text-slate-800 text-sm">Pinasungkulan</span>
                         </div>
                         <button id="menu-close" class="p-1 text-slate-400 hover:text-slate-700 rounded-lg" aria-label="Tutup Menu">
