@@ -5,15 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berita & Pengumuman | Kelurahan Pinasungkulan</title>
+    <!-- Google Fonts: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="style.css" rel="stylesheet">
 </head>
 
 <body class="bg-slate-100 text-slate-800 font-['Poppins'] flex flex-col min-h-screen overflow-x-hidden">
 
+    <!-- Header / Navigasi -->
     <header id="main-header" class="fixed top-0 left-0 w-full z-50 bg-slate-900 text-white shadow-md">
         <div id="header-container" class="relative z-10 container mx-auto flex items-center justify-between py-4 px-4 md:px-8 transition-all duration-300">
+            
+            <!-- Logo & Title -->
             <a href="index.html" class="flex items-center gap-3.5 group">
                 <div class="relative flex items-center justify-center w-11 h-11 md:w-13 md:h-13 rounded-full bg-slate-800/80 border border-white/10 overflow-hidden shadow-sm transition-all duration-300 group-hover:scale-105 shrink-0">
                     <img id="header-logo" src="foto/LogoBitung.png" alt="Logo Kelurahan" class="w-full h-full object-contain p-0.5">
@@ -24,12 +29,14 @@
                 </div>
             </a>
             
+            <!-- Mobile Toggle Button -->
             <button id="menu-toggle" class="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none transition-colors" aria-label="Buka Menu">
                 <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
             
+            <!-- Desktop Navigation -->
             <nav id="desktop-nav" class="hidden lg:flex items-center gap-1 bg-slate-900/40 backdrop-blur-md p-1.5 rounded-full border border-white/15">
                 <a href="index.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Beranda</a>
                 <a href="profil.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Profil</a>
@@ -42,6 +49,7 @@
             </nav>
         </div>
 
+        <!-- Mobile Sidebar Menu -->
         <nav id="mobile-menu" class="lg:hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden">
             <div class="bg-white w-4/5 max-w-xs h-full shadow-2xl p-6 flex flex-col justify-between transition-transform duration-300">
                 <div>
@@ -78,7 +86,10 @@
         </nav>
     </header>
 
-    <main class="flex-1 pt-8 pb-16">
+    <!-- Main Content (pt-8 dihapus agar posisi banner sejajar konsisten dengan halaman lainnya) -->
+    <main class="flex-1 pb-16">
+        
+        <!-- Banner Halaman -->
         <section class="bg-slate-900 text-white pt-32 pb-10 mb-12 border-b border-slate-800 relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-r from-emerald-950/40 to-slate-900 z-0"></div>
             <div class="container mx-auto px-4 relative z-10 text-center max-w-3xl">
@@ -90,69 +101,105 @@
             </div>
         </section>
 
-        <div class="container mx-auto px-4 max-w-7xl space-y-16">
+        <div class="container mx-auto px-4 max-w-5xl space-y-16">
+            
+            <!-- SECTION 1: BERITA KELURAHAN -->
             <section>
                 <div class="mb-8">
                     <h3 class="text-2xl font-bold text-slate-900">Berita Kelurahan</h3>
                     <p class="text-sm text-slate-500 mt-0.5">Kumpulan artikel dan dokumentasi kegiatan terbaru.</p>
                 </div>
 
-                <div class="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-6">
-                    <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                        <a href="berita-detail.html" class="relative h-48 bg-slate-100 block overflow-hidden group">
+                <!-- List Berita (Layout Horizontal: Kiri Foto, Kanan Konten) -->
+                <div class="space-y-6">
+                    
+                    <!-- Item Berita 1 -->
+                    <div class="bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row gap-6 items-start">
+                        <a href="berita-detail.html" class="w-full md:w-72 h-48 md:h-40 shrink-0 rounded-xl overflow-hidden bg-slate-100 block relative group">
                             <img src="foto/LogoPosko.jpg" alt="Berita 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <span class="absolute top-3 left-3 bg-emerald-100 text-emerald-800 text-[11px] font-semibold px-3 py-1 rounded-full shadow-xs">Kegiatan</span>
                         </a>
-                        <div class="p-5 flex flex-col flex-grow">
-                            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
-                                <span>25 Juli 2026</span>
-                                <span>Oleh: Admin</span>
+                        <div class="flex-1 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex flex-wrap items-center gap-3 text-xs text-slate-500 mb-2">
+                                    <span class="bg-emerald-100 text-emerald-800 font-semibold px-2.5 py-0.5 rounded-full">Kegiatan</span>
+                                    <span class="flex items-center gap-1">📅 25 Juli 2026</span>
+                                    <span class="flex items-center gap-1">👤 Oleh: Admin</span>
+                                </div>
+                                <a href="berita-detail.html" class="text-lg md:text-xl font-bold text-slate-900 hover:text-emerald-600 transition-colors block mb-2 leading-snug">
+                                    Judul Berita 1: Kegiatan Kerja Bakti Bersama Warga
+                                </a>
+                                <p class="text-slate-600 text-xs md:text-sm line-clamp-2 md:line-clamp-3 leading-relaxed mb-4">
+                                    Ringkasan berita 1 menjelaskan mengenai jalannya kegiatan kerja bakti pembersihan lingkungan sekitar kelurahan yang dihadiri oleh seluruh perangkat desa dan warga setempat.
+                                </p>
                             </div>
-                            <a href="berita-detail.html" class="text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-2 line-clamp-2">Judul Berita 1</a>
-                            <p class="text-slate-600 text-xs line-clamp-3 mb-4">Ringkasan berita 1</p>
-                            <div class="mt-auto pt-3 border-t border-slate-100 flex justify-end text-xs">
-                                <a href="berita-detail.html" class="text-emerald-600 font-semibold hover:underline">Baca Selengkapnya &rarr;</a>
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                                <span class="text-slate-400">Reportase Kelurahan Pinasungkulan</span>
+                                <a href="berita-detail.html" class="text-emerald-600 font-semibold hover:underline inline-flex items-center gap-1">
+                                    Baca Selengkapnya &rarr;
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                        <a href="berita-detail2.html" class="relative h-48 bg-slate-100 block overflow-hidden group">
-                            <img src="foto\LogoPosko.jpg" alt="Berita 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <span class="absolute top-3 left-3 bg-emerald-100 text-emerald-800 text-[11px] font-semibold px-3 py-1 rounded-full shadow-xs">Pemerintahan</span>
+                    <!-- Item Berita 2 -->
+                    <div class="bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row gap-6 items-start">
+                        <a href="berita-detail2.html" class="w-full md:w-72 h-48 md:h-40 shrink-0 rounded-xl overflow-hidden bg-slate-100 block relative group">
+                            <img src="foto/LogoPosko.jpg" alt="Berita 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </a>
-                        <div class="p-5 flex flex-col flex-grow">
-                            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
-                                <span>25 Juli 2026</span>
-                                <span>Oleh: Admin</span>
+                        <div class="flex-1 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex flex-wrap items-center gap-3 text-xs text-slate-500 mb-2">
+                                    <span class="bg-emerald-100 text-emerald-800 font-semibold px-2.5 py-0.5 rounded-full">Pemerintahan</span>
+                                    <span class="flex items-center gap-1">📅 25 Juli 2026</span>
+                                    <span class="flex items-center gap-1">👤 Oleh: Admin</span>
+                                </div>
+                                <a href="berita-detail2.html" class="text-lg md:text-xl font-bold text-slate-900 hover:text-emerald-600 transition-colors block mb-2 leading-snug">
+                                    Judul Berita 2: Rapat Koordinasi Pelayanan Publik Desa
+                                </a>
+                                <p class="text-slate-600 text-xs md:text-sm line-clamp-2 md:line-clamp-3 leading-relaxed mb-4">
+                                    Ringkasan berita 2 mengenai evaluasi pelayanan administrasi kependudukan dan peningkatan fasilitas bagi warga masyarakat Kelurahan Pinasungkulan.
+                                </p>
                             </div>
-                            <a href="berita-detail2.html" class="text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-2 line-clamp-2">Judul Berita 2</a>
-                            <p class="text-slate-600 text-xs line-clamp-3 mb-4">Ringkasan berita 2</p>
-                            <div class="mt-auto pt-3 border-t border-slate-100 flex justify-end text-xs">
-                                <a href="berita-detail2.html" class="text-emerald-600 font-semibold hover:underline">Baca Selengkapnya &rarr;</a>
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                                <span class="text-slate-400">Reportase Kelurahan Pinasungkulan</span>
+                                <a href="berita-detail2.html" class="text-emerald-600 font-semibold hover:underline inline-flex items-center gap-1">
+                                    Baca Selengkapnya &rarr;
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                        <a href="berita-detail3.html" class="relative h-48 bg-slate-100 block overflow-hidden group">
-                            <img src="foto\LogoPosko.jpg" alt="Berita 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <span class="absolute top-3 left-3 bg-emerald-100 text-emerald-800 text-[11px] font-semibold px-3 py-1 rounded-full shadow-xs">Pembangunan</span>
+                    <!-- Item Berita 3 -->
+                    <div class="bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row gap-6 items-start">
+                        <a href="berita-detail3.html" class="w-full md:w-72 h-48 md:h-40 shrink-0 rounded-xl overflow-hidden bg-slate-100 block relative group">
+                            <img src="foto/LogoPosko.jpg" alt="Berita 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </a>
-                        <div class="p-5 flex flex-col flex-grow">
-                            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
-                                <span>25 Juli 2026</span>
-                                <span>Oleh: Admin</span>
+                        <div class="flex-1 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex flex-wrap items-center gap-3 text-xs text-slate-500 mb-2">
+                                    <span class="bg-emerald-100 text-emerald-800 font-semibold px-2.5 py-0.5 rounded-full">Pembangunan</span>
+                                    <span class="flex items-center gap-1">📅 25 Juli 2026</span>
+                                    <span class="flex items-center gap-1">👤 Oleh: Admin</span>
+                                </div>
+                                <a href="berita-detail3.html" class="text-lg md:text-xl font-bold text-slate-900 hover:text-emerald-600 transition-colors block mb-2 leading-snug">
+                                    Judul Berita 3: Progres Pembangunan Infrastruktur Lingkungan
+                                </a>
+                                <p class="text-slate-600 text-xs md:text-sm line-clamp-2 md:line-clamp-3 leading-relaxed mb-4">
+                                    Ringkasan berita 3 mengulas perkembangan proyek perbaikan fasilitas umum dan akses jalan di wilayah lingkungan kelurahan.
+                                </p>
                             </div>
-                            <a href="berita-detail3.html" class="text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-2 line-clamp-2">Judul Berita 3</a>
-                            <p class="text-slate-600 text-xs line-clamp-3 mb-4">Ringkasan berita 3</p>
-                            <div class="mt-auto pt-3 border-t border-slate-100 flex justify-end text-xs">
-                                <a href="berita-detail3.html" class="text-emerald-600 font-semibold hover:underline">Baca Selengkapnya &rarr;</a>
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                                <span class="text-slate-400">Reportase Kelurahan Pinasungkulan</span>
+                                <a href="berita-detail3.html" class="text-emerald-600 font-semibold hover:underline inline-flex items-center gap-1">
+                                    Baca Selengkapnya &rarr;
+                                </a>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
+                <!-- Paging Pagination -->
                 <div class="flex justify-center mt-10">
                     <nav class="inline-flex rounded-xl shadow-sm bg-white border border-slate-200 overflow-hidden" aria-label="Pagination">
                         <a href="#" class="px-4 py-2 border-r border-slate-200 text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">&laquo;</a>
@@ -164,71 +211,107 @@
                 </div>
             </section>
 
-            <section>
+            <!-- SECTION 2: PENGUMUMAN RESMI -->
+            <section class="pt-6">
                 <div class="mb-8">
                     <h3 class="text-2xl font-bold text-slate-900">Pengumuman Resmi</h3>
                     <p class="text-sm text-slate-500 mt-0.5">Informasi penting dan himbauan langsung dari kelurahan.</p>
                 </div>
 
-                <div class="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-6">
-                    <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                        <a href="pengumuman-detail.html" class="relative h-48 bg-slate-100 block overflow-hidden group">
-                            <img src="foto\LogoPosko.jpg" alt="Pengumuman 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <span class="absolute top-3 left-3 bg-amber-100 text-amber-800 text-[11px] font-semibold px-3 py-1 rounded-full shadow-xs">Penting</span>
+                <!-- List Pengumuman (Layout Horizontal) -->
+                <div class="space-y-6">
+                    
+                    <!-- Item Pengumuman 1 -->
+                    <div class="bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row gap-6 items-start">
+                        <a href="pengumuman-detail.html" class="w-full md:w-72 h-48 md:h-40 shrink-0 rounded-xl overflow-hidden bg-slate-100 block relative group">
+                            <img src="foto/LogoPosko.jpg" alt="Pengumuman 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </a>
-                        <div class="p-5 flex flex-col flex-grow">
-                            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
-                                <span>25 Juli 2026</span>
-                                <span>Oleh: Admin</span>
+                        <div class="flex-1 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex flex-wrap items-center gap-3 text-xs text-slate-500 mb-2">
+                                    <span class="bg-amber-100 text-amber-800 font-semibold px-2.5 py-0.5 rounded-full">Penting</span>
+                                    <span class="flex items-center gap-1">📅 25 Juli 2026</span>
+                                    <span class="flex items-center gap-1">👤 Oleh: Admin</span>
+                                </div>
+                                <a href="pengumuman-detail.html" class="text-lg md:text-xl font-bold text-slate-900 hover:text-emerald-600 transition-colors block mb-2 leading-snug">
+                                    Judul Pengumuman 1: Jadwal Pelayanan Administrasi Selama Libur Nasional
+                                </a>
+                                <p class="text-slate-600 text-xs md:text-sm line-clamp-2 md:line-clamp-3 leading-relaxed mb-4">
+                                    Ringkasan pengumuman 1 mengenai penyesuaian jam operasional kantor kelurahan dan pelayanan administrasi kependudukan pada hari libur nasional.
+                                </p>
                             </div>
-                            <a href="pengumuman-detail.html" class="text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-2 line-clamp-2">Judul Pengumuman 1</a>
-                            <p class="text-slate-600 text-xs line-clamp-3 mb-4">Ringkasan pengumuman 1</p>
-                            <div class="mt-auto pt-3 border-t border-slate-100">
-                                <a href="pengumuman-detail.html" class="text-emerald-600 text-xs font-semibold hover:underline">Baca Detail &rarr;</a>
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                                <span class="text-slate-400">Pengumuman Resmi Kelurahan</span>
+                                <a href="pengumuman-detail.html" class="text-emerald-600 font-semibold hover:underline inline-flex items-center gap-1">
+                                    Baca Detail &rarr;
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                        <a href="pengumuman-detail.html" class="relative h-48 bg-slate-100 block overflow-hidden group">
-                            <img src="foto\LogoPosko.jpg" alt="Pengumuman 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <span class="absolute top-3 left-3 bg-amber-100 text-amber-800 text-[11px] font-semibold px-3 py-1 rounded-full shadow-xs">Himbauan</span>
+                    <!-- Item Pengumuman 2 -->
+                    <div class="bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row gap-6 items-start">
+                        <a href="pengumuman-detail.html" class="w-full md:w-72 h-48 md:h-40 shrink-0 rounded-xl overflow-hidden bg-slate-100 block relative group">
+                            <img src="foto/LogoPosko.jpg" alt="Pengumuman 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </a>
-                        <div class="p-5 flex flex-col flex-grow">
-                            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
-                                <span>25 Juli 2026</span>
-                                <span>Oleh: Admin</span>
+                        <div class="flex-1 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex flex-wrap items-center gap-3 text-xs text-slate-500 mb-2">
+                                    <span class="bg-amber-100 text-amber-800 font-semibold px-2.5 py-0.5 rounded-full">Himbauan</span>
+                                    <span class="flex items-center gap-1">📅 25 Juli 2026</span>
+                                    <span class="flex items-center gap-1">👤 Oleh: Admin</span>
+                                </div>
+                                <a href="pengumuman-detail.html" class="text-lg md:text-xl font-bold text-slate-900 hover:text-emerald-600 transition-colors block mb-2 leading-snug">
+                                    Judul Pengumuman 2: Himbauan Waspada Cuaca Ekstrem
+                                </a>
+                                <p class="text-slate-600 text-xs md:text-sm line-clamp-2 md:line-clamp-3 leading-relaxed mb-4">
+                                    Ringkasan pengumuman 2 berisi himbauan kepada seluruh warga masyarakat untuk tetap waspada terhadap potensi cuaca ekstrem di wilayah sekitar.
+                                </p>
                             </div>
-                            <a href="pengumuman-detail.html" class="text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-2 line-clamp-2">Judul Pengumuman 2</a>
-                            <p class="text-slate-600 text-xs line-clamp-3 mb-4">Ringkasan pengumuman 2</p>
-                            <div class="mt-auto pt-3 border-t border-slate-100">
-                                <a href="pengumuman-detail.html" class="text-emerald-600 text-xs font-semibold hover:underline">Baca Detail &rarr;</a>
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                                <span class="text-slate-400">Pengumuman Resmi Kelurahan</span>
+                                <a href="pengumuman-detail.html" class="text-emerald-600 font-semibold hover:underline inline-flex items-center gap-1">
+                                    Baca Detail &rarr;
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                        <a href="pengumuman-detail.html" class="relative h-48 bg-slate-100 block overflow-hidden group">
-                            <img src="foto\LogoPosko.jpg" alt="Pengumuman 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <span class="absolute top-3 left-3 bg-amber-100 text-amber-800 text-[11px] font-semibold px-3 py-1 rounded-full shadow-xs">Bantuan</span>
+                    <!-- Item Pengumuman 3 -->
+                    <div class="bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row gap-6 items-start">
+                        <a href="pengumuman-detail.html" class="w-full md:w-72 h-48 md:h-40 shrink-0 rounded-xl overflow-hidden bg-slate-100 block relative group">
+                            <img src="foto/LogoPosko.jpg" alt="Pengumuman 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </a>
-                        <div class="p-5 flex flex-col flex-grow">
-                            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
-                                <span>25 Juli 2026</span>
-                                <span>Oleh: Admin</span>
+                        <div class="flex-1 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex flex-wrap items-center gap-3 text-xs text-slate-500 mb-2">
+                                    <span class="bg-amber-100 text-amber-800 font-semibold px-2.5 py-0.5 rounded-full">Bantuan</span>
+                                    <span class="flex items-center gap-1">📅 25 Juli 2026</span>
+                                    <span class="flex items-center gap-1">👤 Oleh: Admin</span>
+                                </div>
+                                <a href="pengumuman-detail.html" class="text-lg md:text-xl font-bold text-slate-900 hover:text-emerald-600 transition-colors block mb-2 leading-snug">
+                                    Judul Pengumuman 3: Pendataan Penyaluran Bantuan Sosial Warga
+                                </a>
+                                <p class="text-slate-600 text-xs md:text-sm line-clamp-2 md:line-clamp-3 leading-relaxed mb-4">
+                                    Ringkasan pengumuman 3 mengenai syarat dan ketentuan pengambilan program bantuan sosial tahap berikutnya bagi warga yang berhak.
+                                </p>
                             </div>
-                            <a href="pengumuman-detail.html" class="text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-2 line-clamp-2">Judul Pengumuman 3</a>
-                            <p class="text-slate-600 text-xs line-clamp-3 mb-4">Ringkasan pengumuman 3</p>
-                            <div class="mt-auto pt-3 border-t border-slate-100">
-                                <a href="pengumuman-detail.html" class="text-emerald-600 text-xs font-semibold hover:underline">Baca Detail &rarr;</a>
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                                <span class="text-slate-400">Pengumuman Resmi Kelurahan</span>
+                                <a href="pengumuman-detail.html" class="text-emerald-600 font-semibold hover:underline inline-flex items-center gap-1">
+                                    Baca Detail &rarr;
+                                </a>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
+
         </div>
     </main>
 
+    <!-- Footer Slate -->
     <footer class="bg-slate-900 text-slate-300 pt-12 pb-8 border-t border-slate-800 mt-auto">
         <div class="container mx-auto px-4 md:px-8 max-w-6xl">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-800">
@@ -277,6 +360,7 @@
         </div>
     </footer>
 
+    <!-- File Script External -->
     <script src="script.js"></script>
 </body>
 
