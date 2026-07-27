@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Direktori UMKM | Kelurahan Pinasungkulan</title>
+    <title>Layanan Publik | Kelurahan Pinasungkulan</title>
     <!-- Google Fonts: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Tailwind CSS v4 CDN -->
@@ -16,9 +16,11 @@
 
     <!-- Header / Navigasi -->
     <header id="main-header" class="fixed top-0 left-0 w-full z-50 bg-slate-900 text-white shadow-md">
+        <div id="header-overlay" class="absolute inset-0 bg-slate-900 backdrop-blur-md z-0 pointer-events-none opacity-100"></div>
+
         <div id="header-container" class="relative z-10 container mx-auto flex items-center justify-between py-4 px-4 md:px-8 transition-all duration-300">
             
-            <!-- Logo & Title -->
+            <!-- Logo & Title (Diperbaiki agar lebih rapi dan proporsional) -->
             <a href="index.html" class="flex items-center gap-3.5 group">
                 <div class="relative flex items-center justify-center w-11 h-11 md:w-13 md:h-13 rounded-full bg-slate-800/80 border border-white/10 overflow-hidden shadow-sm transition-all duration-300 group-hover:scale-105 shrink-0">
                     <img id="header-logo" src="foto/LogoBitung.png" alt="Logo Kelurahan" class="w-full h-full object-contain p-0.5">
@@ -41,8 +43,8 @@
                 <a href="index.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Beranda</a>
                 <a href="profil.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Profil</a>
                 <a href="pemerintahan.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Pemerintahan</a>
-                <a href="layanan-publik.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Layanan</a>
-                <a href="umkm.html" class="text-sm font-semibold text-white bg-emerald-600 px-5 py-2 rounded-full shadow-sm transition-all">UMKM</a>
+                <a href="layanan-publik.html" class="text-sm font-semibold text-white bg-emerald-600 px-5 py-2 rounded-full shadow-sm transition-all">Layanan</a>
+                <a href="umkm.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">UMKM</a>
                 <a href="berita-pengumuman.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Berita</a>
                 <a href="galeri.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Galeri</a>
                 <a href="kontak.html" class="text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">Kontak</a>
@@ -71,8 +73,8 @@
                         <a href="index.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Beranda</a>
                         <a href="profil.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Profil Kelurahan</a>
                         <a href="pemerintahan.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Pemerintahan</a>
-                        <a href="layanan-publik.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Layanan Publik</a>
-                        <a href="umkm.html" class="bg-slate-800 text-white font-semibold px-4 py-2.5 rounded-xl text-sm">UMKM</a>
+                        <a href="layanan-publik.html" class="bg-slate-800 text-white font-semibold px-4 py-2.5 rounded-xl text-sm">Layanan Publik</a>
+                        <a href="umkm.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">UMKM</a>
                         <a href="berita-pengumuman.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Berita & Pengumuman</a>
                         <a href="galeri.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Galeri</a>
                         <a href="kontak.html" class="text-slate-600 font-medium hover:bg-slate-50 px-4 py-2.5 rounded-xl text-sm transition-colors">Kontak</a>
@@ -86,274 +88,191 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
+    <!-- Main Content Area -->
     <main class="flex-1 pb-16">
         
-        <!-- Banner Halaman -->
+        <!-- Header Banner Section -->
         <section class="bg-slate-900 text-white pt-32 pb-10 mb-12 border-b border-slate-800 relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-r from-emerald-950/40 to-slate-900 z-0"></div>
             <div class="container mx-auto px-4 relative z-10 text-center max-w-3xl">
-                <span class="bg-emerald-600/20 text-emerald-300 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider border border-emerald-500/30">Direktori Usaha Warga</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold mt-3 mb-3 text-slate-100">Pusat UMKM Pinasungkulan</h2>
-                <p class="text-slate-300 text-base max-w-2xl mx-auto">
-                    Dukung usaha lokal warga Kelurahan Pinasungkulan. Temukan berbagai produk kuliner, warung, dan jasa terbaik di sekitar kita.
+                <span class="bg-emerald-600/20 text-emerald-300 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider border border-emerald-500/30">Pusat Pelayanan Warga</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold mt-3 mb-3 text-slate-100">Layanan Publik Digital</h2>
+                <p class="text-slate-300 text-base max-w-2xl mx-auto mb-6">
+                    Akses informasi layanan, konsultasi administrasi, dan potensi lokal Kelurahan Pinasungkulan secara cepat dan mudah.
                 </p>
+
+                <!-- Information Badge -->
+                <div class="inline-flex items-center gap-2 bg-slate-800/90 border border-slate-700 px-4 py-2 rounded-xl text-sm text-slate-200 shadow-inner">
+                    <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Jam Pelayanan Kantor: <strong>Senin - Jumat (08.00 - 15.00 WITA)</strong></span>
+                </div>
             </div>
         </section>
 
-        <div class="container mx-auto px-4 max-w-7xl">
+        <div class="container mx-auto max-w-6xl px-4">
             
-            <!-- Filter Kategori Cepat (Tombol Jasa Dikembalikan) -->
-            <div class="flex flex-wrap justify-center gap-2.5 mb-10">
-                <a href="umkm.html" class="px-5 py-2 bg-emerald-600 text-white font-semibold rounded-full shadow-sm text-sm transition-all">
-                    Semua Usaha
-                </a>
-                <a href="kuliner.html" class="px-5 py-2 bg-white text-slate-700 font-medium rounded-full border border-slate-200 hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-200 transition-all text-sm">
-                    Kuliner
-                </a>
-                <a href="warung.html" class="px-5 py-2 bg-white text-slate-700 font-medium rounded-full border border-slate-200 hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-200 transition-all text-sm">
-                    Warung
-                </a>
-                <a href="jasa.html" class="px-5 py-2 bg-white text-slate-700 font-medium rounded-full border border-slate-200 hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-200 transition-all text-sm">
-                    Jasa
-                </a>
+            <!-- Judul Section -->
+            <div class="mb-8 text-center md:text-left">
+                <h3 class="text-2xl font-bold text-slate-900">Daftar Pelayanan Utama</h3>
+                <p class="text-slate-500 text-sm">Silakan pilih kategori informasi atau layanan di bawah ini</p>
             </div>
 
-            <!-- Layout Grid Toko/Usaha: Kuliner dan Warung Diacak Bersama -->
-            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+            <!-- Grid Layanan Publik -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 
-                <!-- MIX 1: WARUNG (Kios Oma Onang) -->
-                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                    <a href="toko-1.html" class="relative h-36 md:h-40 bg-slate-100 block overflow-hidden group">
-                        <img src="FotoWarung/TokoOmaOnang.jpg" alt="Warung 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <span class="absolute top-2.5 left-2.5 bg-sky-100 text-sky-800 text-[10px] font-semibold px-2.5 py-0.5 rounded-full shadow-xs">Warung</span>
-                    </a>
-                    <div class="p-3 md:p-4 flex flex-col flex-grow">
-                        <a href="toko-1.html" class="text-sm md:text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-0.5 truncate">Kios Oma Onang</a>
-                        <p class="text-[11px] md:text-xs text-slate-500 font-medium mb-1.5 truncate">Pemilik: Ibu Lince</p>
-                        <p class="text-slate-600 text-[11px] md:text-xs line-clamp-2 mb-3">Warung sembako lengkap menyediakan kebutuhan dapur, beras, gula, dan minyak goreng.</p>
-                        <div class="mt-auto pt-2.5 border-t border-slate-100 text-[10px] md:text-[11px] text-slate-500 space-y-1">
-                            <div class="truncate">📍 Lingkungan 1</div>
-                            <div class="truncate font-medium text-slate-700">📞 0852-1502-5044</div>
+                <!-- Layanan 1: Hubungi WhatsApp Online -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200/80 p-6 transition-all duration-300 ease-in-out group flex flex-col justify-between hover:-translate-y-1">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-800 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-300 shadow-inner">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                            </div>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1 rounded-full border border-slate-300">Online 24/7</span>
                         </div>
-                        <div class="mt-3 flex items-center gap-1 w-full">
-                            <a href="https://wa.me/6285215025044" target="_blank" class="flex-1 text-center bg-emerald-50 text-emerald-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-emerald-600 hover:text-white transition-all duration-200 text-[11px]">WA</a>
-                            <a href="https://maps.app.goo.gl/n4WfiK55iqtGWn4u8" target="_blank" class="flex-1 text-center bg-slate-100 text-slate-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-200 text-[11px]">Lokasi</a>
-                        </div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-slate-900 transition-colors">Pengajuan Surat via WhatsApp</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Untuk pengurusan surat keterangan atau konsultasi administrasi, silakan hubungi layanan online kami langsung melalui WhatsApp.
+                        </p>
                     </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Kelurahan%20Pinasungkulan,%20saya%20ingin%20mengajukan%20permohonan%20surat..." target="_blank" class="inline-flex items-center justify-center gap-2 bg-slate-800 text-white font-semibold py-2.5 px-5 rounded-xl hover:bg-slate-900 transition-all duration-200 shadow-md active:scale-95">
+                        <span>Hubungi WhatsApp</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
                 </div>
 
-                <!-- MIX 2: KULINER (Rm Yoel) -->
-                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                    <a href="toko-2.html" class="relative h-36 md:h-40 bg-slate-100 block overflow-hidden group">
-                        <img src="FotoKuliner/RmYoel.jpg" alt="Kuliner 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <span class="absolute top-2.5 left-2.5 bg-amber-100 text-amber-800 text-[10px] font-semibold px-2.5 py-0.5 rounded-full shadow-xs">Kuliner</span>
-                    </a>
-                    <div class="p-3 md:p-4 flex flex-col flex-grow">
-                        <a href="toko-2.html" class="text-sm md:text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-0.5 truncate">Rm Yoel</a>
-                        <p class="text-[11px] md:text-xs text-slate-500 font-medium mb-1.5 truncate">Pemilik: -</p>
-                        <p class="text-slate-600 text-[11px] md:text-xs line-clamp-2 mb-3">Sedia aneka masakan rumahan dan makanan ringan khas Pinasungkulan yang enak dan murah.</p>
-                        <div class="mt-auto pt-2.5 border-t border-slate-100 text-[10px] md:text-[11px] text-slate-500 space-y-1">
-                            <div class="truncate">📍 Lingkungan 1</div>
-                            <div class="truncate font-medium text-slate-700">📞 0856-5654-4710</div>
+                <!-- Layanan 2: Data Kependudukan -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200/80 p-6 transition-all duration-300 ease-in-out group flex flex-col justify-between hover:-translate-y-1">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-800 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-300 shadow-inner">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                            </div>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1 rounded-full border border-slate-300">Statistik</span>
                         </div>
-                        <div class="mt-3 flex items-center gap-1 w-full">
-                            <a href="https://wa.me/6285656544710" target="_blank" class="flex-1 text-center bg-emerald-50 text-emerald-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-emerald-600 hover:text-white transition-all duration-200 text-[11px]">WA</a>
-                            <a href="https://maps.app.goo.gl/axzRF3JK2L1pWj5W7" target="_blank" class="flex-1 text-center bg-slate-100 text-slate-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-200 text-[11px]">Lokasi</a>
-                        </div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-slate-900 transition-colors">Data Kependudukan</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Lihat rekapitulasi data demografi kependudukan lengkap seperti jumlah penduduk, kelompok umur, dan agama di halaman profil.
+                        </p>
                     </div>
+                    <a href="profil.html#data-kependudukan" class="inline-flex items-center justify-center gap-2 bg-slate-800 text-white font-semibold py-2.5 px-5 rounded-xl hover:bg-slate-900 transition-all duration-200 shadow-md active:scale-95">
+                        <span>Lihat Data Kependudukan</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
                 </div>
 
-                <!-- MIX 3: WARUNG (Kios FAM Mandiri) -->
-                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                    <a href="toko-3.html" class="relative h-36 md:h-40 bg-slate-100 block overflow-hidden group">
-                        <img src="FotoWarung/TokoKakFrenly.jpg" alt="Warung 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <span class="absolute top-2.5 left-2.5 bg-sky-100 text-sky-800 text-[10px] font-semibold px-2.5 py-0.5 rounded-full shadow-xs">Warung</span>
-                    </a>
-                    <div class="p-3 md:p-4 flex flex-col flex-grow">
-                        <a href="toko-3.html" class="text-sm md:text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-0.5 truncate">Kios FAM Mandiri</a>
-                        <p class="text-[11px] md:text-xs text-slate-500 font-medium mb-1.5 truncate">Pemilik: Kak Frenly</p>
-                        <p class="text-slate-600 text-[11px] md:text-xs line-clamp-2 mb-3">Menjual aneka kebutuhan harian, jajanan anak, dan air galon isi ulang terdekat.</p>
-                        <div class="mt-auto pt-2.5 border-t border-slate-100 text-[10px] md:text-[11px] text-slate-500 space-y-1">
-                            <div class="truncate">📍 Lingkungan 1</div>
-                            <div class="truncate font-medium text-slate-700">📞 0822-9147-0207</div>
+                <!-- Layanan 3: Berita & Pengumuman -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200/80 p-6 transition-all duration-300 ease-in-out group flex flex-col justify-between hover:-translate-y-1">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-800 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-300 shadow-inner">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
+                                </svg>
+                            </div>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1 rounded-full border border-slate-300">Informasi</span>
                         </div>
-                        <div class="mt-3 flex items-center gap-1 w-full">
-                            <a href="https://wa.me/6282291470207" target="_blank" class="flex-1 text-center bg-emerald-50 text-emerald-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-emerald-600 hover:text-white transition-all duration-200 text-[11px]">WA</a>
-                            <a href="https://maps.app.goo.gl/Z4HD8iYFMccjMVA76" target="_blank" class="flex-1 text-center bg-slate-100 text-slate-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-200 text-[11px]">Lokasi</a>
-                        </div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-slate-900 transition-colors">Berita & Pengumuman</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Pantau informasi terbaru mengenai kegiatan kelurahan, program kerja, dan pengumuman penting lainnya.
+                        </p>
                     </div>
+                    <a href="berita-pengumuman.html" class="inline-flex items-center justify-center gap-2 bg-slate-800 text-white font-semibold py-2.5 px-5 rounded-xl hover:bg-slate-900 transition-all duration-200 shadow-md active:scale-95">
+                        <span>Lihat Berita</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
                 </div>
 
-                <!-- MIX 4: WARUNG (Kios Mastin Good) -->
-                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                    <a href="toko-4.html" class="relative h-36 md:h-40 bg-slate-100 block overflow-hidden group">
-                        <img src="FotoWarung/TokoMastinGood.jpg" alt="Warung 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <span class="absolute top-2.5 left-2.5 bg-sky-100 text-sky-800 text-[10px] font-semibold px-2.5 py-0.5 rounded-full shadow-xs">Warung</span>
-                    </a>
-                    <div class="p-3 md:p-4 flex flex-col flex-grow">
-                        <a href="toko-4.html" class="text-sm md:text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-0.5 truncate">Kios Mastin Good</a>
-                        <p class="text-[11px] md:text-xs text-slate-500 font-medium mb-1.5 truncate">Pemilik: Ibu Oktafin</p>
-                        <p class="text-slate-600 text-[11px] md:text-xs line-clamp-2 mb-3">Warung kelontong lokal yang buka hingga malam hari untuk memenuhi kebutuhan mendadak warga.</p>
-                        <div class="mt-auto pt-2.5 border-t border-slate-100 text-[10px] md:text-[11px] text-slate-500 space-y-1">
-                            <div class="truncate">📍 Lingkungan 2</div>
-                            <div class="truncate font-medium text-slate-700">📞 0853-4297-7906</div>
+                <!-- Layanan 4: UMKM Kelurahan -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200/80 p-6 transition-all duration-300 ease-in-out group flex flex-col justify-between hover:-translate-y-1">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-800 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-300 shadow-inner">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                </svg>
+                            </div>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1 rounded-full border border-slate-300">Potensi Lokal</span>
                         </div>
-                        <div class="mt-3 flex items-center gap-1 w-full">
-                            <a href="https://wa.me/6285342977906" target="_blank" class="flex-1 text-center bg-emerald-50 text-emerald-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-emerald-600 hover:text-white transition-all duration-200 text-[11px]">WA</a>
-                            <a href="https://maps.app.goo.gl/rVmF58z5JDtuvNW58" target="_blank" class="flex-1 text-center bg-slate-100 text-slate-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-200 text-[11px]">Lokasi</a>
-                        </div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-slate-900 transition-colors">UMKM Kelurahan</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Jelajahi berbagai produk unggulan, makanan khas, dan usaha mikro kecil menengah dari warga lokal Pinasungkulan.
+                        </p>
                     </div>
-                </div>
-
-                <!-- MIX 5: KULINER (Kios mie ba complit) -->
-                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                    <a href="toko-5.html" class="relative h-36 md:h-40 bg-slate-100 block overflow-hidden group">
-                        <img src="FotoKuliner/KulinerMieBaKomplit.jpeg" alt="Kuliner 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <span class="absolute top-2.5 left-2.5 bg-amber-100 text-amber-800 text-[10px] font-semibold px-2.5 py-0.5 rounded-full shadow-xs">Kuliner</span>
+                    <a href="umkm.html" class="inline-flex items-center justify-center gap-2 bg-slate-800 text-white font-semibold py-2.5 px-5 rounded-xl hover:bg-slate-900 transition-all duration-200 shadow-md active:scale-95">
+                        <span>Lihat UMKM</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
                     </a>
-                    <div class="p-3 md:p-4 flex flex-col flex-grow">
-                        <a href="toko-5.html" class="text-sm md:text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-0.5 truncate">Kios mie ba complit</a>
-                        <p class="text-[11px] md:text-xs text-slate-500 font-medium mb-1.5 truncate">Pemilik: T Dey</p>
-                        <p class="text-slate-600 text-[11px] md:text-xs line-clamp-2 mb-3">Tersedia menu makanan berat, nasi bungkus, dan katering murah untuk berbagai acara.</p>
-                        <div class="mt-auto pt-2.5 border-t border-slate-100 text-[10px] md:text-[11px] text-slate-500 space-y-1">
-                            <div class="truncate">📍 Lingkungan 2</div>
-                            <div class="truncate font-medium text-slate-700">📞 0821-5670-2695</div>
-                        </div>
-                        <div class="mt-3 flex items-center gap-1 w-full">
-                            <a href="https://wa.me/6282156702695" target="_blank" class="flex-1 text-center bg-emerald-50 text-emerald-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-emerald-600 hover:text-white transition-all duration-200 text-[11px]">WA</a>
-                            <a href="https://maps.app.goo.gl/Ykj371HXeoyazVZ77" target="_blank" class="flex-1 text-center bg-slate-100 text-slate-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-200 text-[11px]">Lokasi</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MIX 6: WARUNG (Kios Jeselin) -->
-                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                    <a href="toko-6.html" class="relative h-36 md:h-40 bg-slate-100 block overflow-hidden group">
-                        <img src="FotoWarung/TokoJeselin.jpg" alt="Warung 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <span class="absolute top-2.5 left-2.5 bg-sky-100 text-sky-800 text-[10px] font-semibold px-2.5 py-0.5 rounded-full shadow-xs">Warung</span>
-                    </a>
-                    <div class="p-3 md:p-4 flex flex-col flex-grow">
-                        <a href="toko-6.html" class="text-sm md:text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-0.5 truncate">Kios Jeselin</a>
-                        <p class="text-[11px] md:text-xs text-slate-500 font-medium mb-1.5 truncate">Pemilik: -</p>
-                        <p class="text-slate-600 text-[11px] md:text-xs line-clamp-2 mb-3">Warung harian yang menyediakan gas elpiji 3kg, telur, serta kebutuhan pokok lainnya.</p>
-                        <div class="mt-auto pt-2.5 border-t border-slate-100 text-[10px] md:text-[11px] text-slate-500 space-y-1">
-                            <div class="truncate">📍 Lingkungan 2</div>
-                            <div class="truncate font-medium text-slate-700">📞 -</div>
-                        </div>
-                        <div class="mt-3 flex items-center gap-1 w-full">
-                            <a href="https://wa.me/62" target="_blank" class="flex-1 text-center bg-emerald-50 text-emerald-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-emerald-600 hover:text-white transition-all duration-200 text-[11px]">WA</a>
-                            <a href="https://maps.app.goo.gl/WsUtRySXbQZVQvXY8" target="_blank" class="flex-1 text-center bg-slate-100 text-slate-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-200 text-[11px]">Lokasi</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MIX 7: WARUNG (Kios Anjar) -->
-                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                    <a href="toko-7.html" class="relative h-36 md:h-40 bg-slate-100 block overflow-hidden group">
-                        <img src="FotoWarung/TokoAnjar.jpg" alt="Warung 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <span class="absolute top-2.5 left-2.5 bg-sky-100 text-sky-800 text-[10px] font-semibold px-2.5 py-0.5 rounded-full shadow-xs">Warung</span>
-                    </a>
-                    <div class="p-3 md:p-4 flex flex-col flex-grow">
-                        <a href="toko-7.html" class="text-sm md:text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-0.5 truncate">Kios Anjar</a>
-                        <p class="text-[11px] md:text-xs text-slate-500 font-medium mb-1.5 truncate">Pemilik: Bapak/Ibu Toko 5</p>
-                        <p class="text-slate-600 text-[11px] md:text-xs line-clamp-2 mb-3">Toko kelontong ramah dengan harga bersahabat untuk belanja eceran warga sekitar.</p>
-                        <div class="mt-auto pt-2.5 border-t border-slate-100 text-[10px] md:text-[11px] text-slate-500 space-y-1">
-                            <div class="truncate">📍 Lingkungan 2</div>
-                            <div class="truncate font-medium text-slate-700">📞 0896-0191-3547</div>
-                        </div>
-                        <div class="mt-3 flex items-center gap-1 w-full">
-                            <a href="https://wa.me/6289601913547" target="_blank" class="flex-1 text-center bg-emerald-50 text-emerald-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-emerald-600 hover:text-white transition-all duration-200 text-[11px]">WA</a>
-                            <a href="https://maps.app.goo.gl/fQaikZFJioMPYTDPA" target="_blank" class="flex-1 text-center bg-slate-100 text-slate-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-200 text-[11px]">Lokasi</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MIX 8: WARUNG (Kios Vannesly) -->
-                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                    <a href="toko-8.html" class="relative h-36 md:h-40 bg-slate-100 block overflow-hidden group">
-                        <img src="FotoWarung/TokoVannesly.jpg" alt="Warung 6" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <span class="absolute top-2.5 left-2.5 bg-sky-100 text-sky-800 text-[10px] font-semibold px-2.5 py-0.5 rounded-full shadow-xs">Warung</span>
-                    </a>
-                    <div class="p-3 md:p-4 flex flex-col flex-grow">
-                        <a href="toko-8.html" class="text-sm md:text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-0.5 truncate">Kios Vannesly</a>
-                        <p class="text-[11px] md:text-xs text-slate-500 font-medium mb-1.5 truncate">Pemilik: Bapak/Ibu Toko 6</p>
-                        <p class="text-slate-600 text-[11px] md:text-xs line-clamp-2 mb-3">Warung kelontong penyedia produk rumah tangga lengkap dan bersih di pemukiman.</p>
-                        <div class="mt-auto pt-2.5 border-t border-slate-100 text-[10px] md:text-[11px] text-slate-500 space-y-1">
-                            <div class="truncate">📍 Lingkungan -</div>
-                            <div class="truncate font-medium text-slate-700">📞 0821-9112-7690</div>
-                        </div>
-                        <div class="mt-3 flex items-center gap-1 w-full">
-                            <a href="https://wa.me/6282191127690" target="_blank" class="flex-1 text-center bg-emerald-50 text-emerald-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-emerald-600 hover:text-white transition-all duration-200 text-[11px]">WA</a>
-                            <a href="https://maps.app.goo.gl/Ykj371HXeoyazVZ77" target="_blank" class="flex-1 text-center bg-slate-100 text-slate-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-200 text-[11px]">Lokasi</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MIX 9: WARUNG (Kios Leon) -->
-                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                    <a href="toko-9.html" class="relative h-36 md:h-40 bg-slate-100 block overflow-hidden group">
-                        <img src="FotoWarung/TokoLeon.jpg" alt="Warung 7" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <span class="absolute top-2.5 left-2.5 bg-sky-100 text-sky-800 text-[10px] font-semibold px-2.5 py-0.5 rounded-full shadow-xs">Warung</span>
-                    </a>
-                    <div class="p-3 md:p-4 flex flex-col flex-grow">
-                        <a href="toko-9.html" class="text-sm md:text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-0.5 truncate">Kios Leon</a>
-                        <p class="text-[11px] md:text-xs text-slate-500 font-medium mb-1.5 truncate">Pemilik: Ibu Irene</p>
-                        <p class="text-slate-600 text-[11px] md:text-xs line-clamp-2 mb-3">Menyediakan berbagai kebutuhan pokok harian dengan sistem pelayanan yang ramah.</p>
-                        <div class="mt-auto pt-2.5 border-t border-slate-100 text-[10px] md:text-[11px] text-slate-500 space-y-1">
-                            <div class="truncate">📍 Lingkungan -</div>
-                            <div class="truncate font-medium text-slate-700">📞 0858-8874-4278</div>
-                        </div>
-                        <div class="mt-3 flex items-center gap-1 w-full">
-                            <a href="https://wa.me/6285888744278" target="_blank" class="flex-1 text-center bg-emerald-50 text-emerald-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-emerald-600 hover:text-white transition-all duration-200 text-[11px]">WA</a>
-                            <a href="https://maps.app.goo.gl/Dimb7bj5zQYqrQQW6" target="_blank" class="flex-1 text-center bg-slate-100 text-slate-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-200 text-[11px]">Lokasi</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MIX 10: WARUNG (Kios Kimhil) -->
-                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                    <a href="toko-10.html" class="relative h-36 md:h-40 bg-slate-100 block overflow-hidden group">
-                        <img src="FotoWarung/TokoKimhil.jpg" alt="Warung 8" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <span class="absolute top-2.5 left-2.5 bg-sky-100 text-sky-800 text-[10px] font-semibold px-2.5 py-0.5 rounded-full shadow-xs">Warung</span>
-                    </a>
-                    <div class="p-3 md:p-4 flex flex-col flex-grow">
-                        <a href="toko-10.html" class="text-sm md:text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-0.5 truncate">Kios Kimhil</a>
-                        <p class="text-[11px] md:text-xs text-slate-500 font-medium mb-1.5 truncate">Pemilik: Ibu Yuni</p>
-                        <p class="text-slate-600 text-[11px] md:text-xs line-clamp-2 mb-3">Warung kelontong serba ada yang menjadi pusat belanja praktis warga sekitar.</p>
-                        <div class="mt-auto pt-2.5 border-t border-slate-100 text-[10px] md:text-[11px] text-slate-500 space-y-1">
-                            <div class="truncate">📍 Lingkungan -</div>
-                            <div class="truncate font-medium text-slate-700">📞 0851-5053-3498</div>
-                        </div>
-                        <div class="mt-3 flex items-center gap-1 w-full">
-                            <a href="https://wa.me/6285150533498" target="_blank" class="flex-1 text-center bg-emerald-50 text-emerald-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-emerald-600 hover:text-white transition-all duration-200 text-[11px]">WA</a>
-                            <a href="https://maps.app.goo.gl/wA387FqXP6d8YA736" target="_blank" class="flex-1 text-center bg-slate-100 text-slate-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-200 text-[11px]">Lokasi</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MIX 11: WARUNG (Kios Harapan) -->
-                <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                    <a href="toko-11.html" class="relative h-36 md:h-40 bg-slate-100 block overflow-hidden group">
-                        <img src="FotoWarung/TokoHarapan.jpg" alt="Warung 9" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <span class="absolute top-2.5 left-2.5 bg-sky-100 text-sky-800 text-[10px] font-semibold px-2.5 py-0.5 rounded-full shadow-xs">Warung</span>
-                    </a>
-                    <div class="p-3 md:p-4 flex flex-col flex-grow">
-                        <a href="toko-11.html" class="text-sm md:text-base font-bold text-slate-900 hover:text-emerald-600 transition-colors mb-0.5 truncate">Kios Harapan</a>
-                        <p class="text-[11px] md:text-xs text-slate-500 font-medium mb-1.5 truncate">Pemilik: ibu rike kaunang</p>
-                        <p class="text-slate-600 text-[11px] md:text-xs line-clamp-2 mb-3">Warung kelontong serba ada yang menjadi pusat belanja praktis warga sekitar.</p>
-                        <div class="mt-auto pt-2.5 border-t border-slate-100 text-[10px] md:text-[11px] text-slate-500 space-y-1">
-                            <div class="truncate">📍 Lingkungan -</div>
-                            <div class="truncate font-medium text-slate-700">📞 0857-9612-7971</div>
-                        </div>
-                        <div class="mt-3 flex items-center gap-1 w-full">
-                            <a href="https://wa.me/6285796127971" target="_blank" class="flex-1 text-center bg-emerald-50 text-emerald-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-emerald-600 hover:text-white transition-all duration-200 text-[11px]">WA</a>
-                            <a href="https://maps.app.goo.gl/cUHEhGSF5ykpEQ317" target="_blank" class="flex-1 text-center bg-slate-100 text-slate-700 font-semibold py-1 px-0.5 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-200 text-[11px]">Lokasi</a>
-                        </div>
-                    </div>
                 </div>
 
             </div>
+
+            <!-- FAQ Section -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8 mb-12">
+                <div class="text-center max-w-xl mx-auto mb-8">
+                    <h3 class="text-2xl font-bold text-slate-900">FAQ Layanan Publik</h3>
+                    <p class="text-slate-500 text-sm mt-1">Pertanyaan umum mengenai pelayanan di Kelurahan Pinasungkulan</p>
+                </div>
+
+                <div class="space-y-4 max-w-4xl mx-auto">
+                    
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                        <h5 class="font-semibold text-slate-800 flex items-center gap-2 mb-1">
+                            <span class="w-6 h-6 rounded-full bg-slate-800 text-white flex items-center justify-center text-xs font-bold">Q</span>
+                            Bagaimana cara mengurus atau mengajukan surat secara online?
+                        </h5>
+                        <p class="text-slate-600 text-sm ml-8">
+                            Anda dapat mengklik tombol <strong>"Hubungi WhatsApp"</strong> di atas untuk langsung terhubung dengan layanan admin guna berkonsultasi mengenai pengajuan surat.
+                        </p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                        <h5 class="font-semibold text-slate-800 flex items-center gap-2 mb-1">
+                            <span class="w-6 h-6 rounded-full bg-slate-800 text-white flex items-center justify-center text-xs font-bold">Q</span>
+                            Di mana saya bisa melihat data kependudukan wilayah?
+                        </h5>
+                        <p class="text-slate-600 text-sm ml-8">
+                            Data kependudukan dan statistik demografi lengkap dapat diakses secara langsung melalui menu <strong>"Profil"</strong> pada navigasi website.
+                        </p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                        <h5 class="font-semibold text-slate-800 flex items-center gap-2 mb-1">
+                            <span class="w-6 h-6 rounded-full bg-slate-800 text-white flex items-center justify-center text-xs font-bold">Q</span>
+                            Bagaimana cara melihat informasi seputar kegiatan dan pengumuman kelurahan?
+                        </h5>
+                        <p class="text-slate-600 text-sm ml-8">
+                            Segala informasi dan pengumuman kegiatan terbaru dipublikasikan secara berkala melalui menu <strong>"Berita"</strong>.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Bantuan / Callout Banner -->
+            <div class="bg-slate-800 text-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg border border-slate-700">
+                <div>
+                    <h4 class="text-xl font-bold mb-1">Butuh Bantuan Informasi Tambahan?</h4>
+                    <p class="text-slate-300 text-sm">Tim pelayanan kelurahan kami siap membantu menjawab pertanyaan Anda.</p>
+                </div>
+                <a href="kontak.html" class="bg-slate-100 text-slate-900 hover:bg-white font-bold px-6 py-3 rounded-xl shadow transition-all duration-200 active:scale-95 whitespace-nowrap">
+                    Hubungi Kami
+                </a>
+            </div>
+
         </div>
     </main>
 
@@ -383,7 +302,7 @@
                         <li><a href="pemerintahan.html" class="hover:text-emerald-400 transition-colors">Pemerintahan</a></li>
                         <li><a href="layanan-publik.html" class="hover:text-emerald-400 transition-colors">Layanan Publik</a></li>
                         <li><a href="umkm.html" class="hover:text-emerald-400 transition-colors">UMKM</a></li>
-                        <li><a href="berita-pengumuman.html" class="hover:text-emerald-400 transition-colors">Berita Terkini</a></li>
+                        <li><a href="berita-pengumuman.html" class="hover:text-emerald-400 transition-colors">Berita & Pengumuman</a></li>
                         <li><a href="galeri.html" class="hover:text-emerald-400 transition-colors">Galeri</a></li>
                         <li><a href="kontak.html" class="hover:text-emerald-400 transition-colors">Kontak</a></li>
                     </ul>
